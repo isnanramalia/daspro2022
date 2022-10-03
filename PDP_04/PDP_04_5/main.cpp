@@ -16,23 +16,20 @@ int main()
     float hasilbagi;
     string kesepakatan;
 
-    cout << "Masukkan panjang tanah: ";
     cin >> p;
-    cout << "Masukkan lebar tanah: ";
     cin >> l;
-    cout << "Kesepakatan (setuju/tidak setuju): ";
     cin >> kesepakatan;
     hasil= p*l;
     hasilbagi= hasil/2;
-    cout << "\n" << "Hasil p*l tanah adalah " << hasil << " meter persegi";
+    cout << "\n" << hasil;
     if(kesepakatan=="setuju")
     {
-        cout << "\n" << "Pak Joni dan Pak Soni masing-masing mendapatkan " << hasilbagi << " meter persegi" << "\n";
+        cout << "\n" << hasilbagi << "\n";
     }
 
     if(kesepakatan=="tidak")
     {
-        cout << "\n" << "Tanah tidak jadi dijual untuk keduanya, maka tanah Pak Eko tetap " << hasil << " meter persegi" << "\n";
+        cout << "\n" << hasil << "\n";
     }
 
     return 0;
