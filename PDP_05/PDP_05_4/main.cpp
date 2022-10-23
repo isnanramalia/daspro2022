@@ -10,21 +10,20 @@ int main()
 {
     //Kasus 4 - IPK
     float ipk;
-    cout << "Menentukan predikat kelulusan IPK mahasiswa" << "\n\n";
 
+    cout << "Menentukan predikat kelulusan IPK mahasiswa" << "\n\n";
+    cout << "Input IPK: ";
     cin >> ipk;
-    if(ipk>=3.5)
-    {
+
+    if(ipk>=3.5){
         cout << "Dengan pujian/Cumlaude" << "\n";
         return 1;
     }
-    if(3.0<=ipk<3.5)
-    {
+    else if(ipk>=3.0&&ipk<3.5){
         cout << "Sangat memuaskan/Very Good" << "\n";
         return 1;
     }
-    if(2.75<=ipk<3.0)
-    {
+    else if(ipk>=2.75&&ipk<3.0){
         cout << "Memuaskan/Good" << "\n\n";
         return 1;
     }

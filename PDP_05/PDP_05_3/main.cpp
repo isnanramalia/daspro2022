@@ -10,14 +10,17 @@ int main()
 {
     //Kasus 3 - Undangan ulang tahun
     int usia;
+
+    cout << "input usia: ";
     cin >> usia;
-    if(usia>=17)
+
+    if(usia<=17)
     {
-        cout << "diundang";
+        cout << "diundang\n";
     }
     else
     {
-        cout << "tidak diundang";
+        cout << "tidak diundang\n";
     }
 
     return 0;

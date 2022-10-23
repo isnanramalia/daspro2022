@@ -11,10 +11,11 @@ int main()
     //Kasus 2 - tukar hadiah
     int tahun;
 
+    cout << "input tahun: ";
     cin >> tahun;
     if(tahun>=2020)
     {
-        cout << "Motor sudah 2020\n";
+        cout << "Motor sudah tahun 2020\n";
     }
     else
     {

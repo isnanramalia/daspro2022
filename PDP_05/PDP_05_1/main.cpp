@@ -10,14 +10,18 @@ int main()
 {
     //Kasus 1 - soal ujian
     int a;
+    cout << "input nim: ";
     cin >> a;
-    if(a%=2)
+
+    if(a%2==0)
     {
-        cout << "Tipe A";
+        cout << "Tipe A" << endl;
+        //jika genap
     }
     else
     {
-        cout << "Tipe B";
+        cout << "Tipe B" << endl;
+        //jika ganjil
     }
     return 0;
 }

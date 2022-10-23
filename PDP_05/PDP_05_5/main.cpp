@@ -8,25 +8,25 @@ using namespace std;
 
 int main()
 {
+    //Kasus 5 - Uang anak kos
     int u;
+    int bulanan;
+
     cout << "Input uang: ";
     cin >> u;
+    bulanan = u-1200000;
 
     if(u<1200000){
         cout << "Input tidak valid!" << endl;
-        return 1;
     }
-    else if(1200000<=u<2000000){
+    else if(bulanan<500000){
         cout << "Soni tidak bisa menonton konser karena uang kurang" << endl;
-        return 1;
     }
-    else if(2000000<=u<5000000){
+    else if(500000<=bulanan&&bulanan<1000000){
         cout << "Soni jadi menonton konser dengan tempat duduk biasa" << endl;
-        return 1;
     }
-    else if(u>=5000000){
+    else{
         cout << "Soni jadi menonton konser dengan tempat duduk VIP" << endl;
-        return 1;
     }
 
     return 0;
