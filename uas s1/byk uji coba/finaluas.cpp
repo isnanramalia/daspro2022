@@ -6,6 +6,7 @@ using namespace std;
 ISNA NUR AMALIA
 A11.2022.14330
 UAS DASPRO - Kamis, 29/12/2022
+JUDUL: PROGRAM PENGOLAHAN DATA PEENJUALAN AYAM GEPREK SELAMA 7 HARI
 */
 
 int main()
@@ -14,7 +15,7 @@ int main()
     int sales[7][2];
 
     // array utk menyimpan nama hari dlm seminggu
-    string hari[7] = {"senin", "selasa", "rabu", "kamis", "jumat", "sabtu", "minggu"};
+    string hari[7] = {"senin", "selasa", "rabu  ", "kamis", "jumat", "sabtu", "minggu"};
 
     // input data penjualan ayam geprek selama 7 hari dari user
     for (int i = 0; i < 7; i++)
@@ -40,19 +41,21 @@ int main()
         cout << "5. tampilkan rata-rata penjualan selama 7 hari" << endl;
         cout << "6. tampilkan data penjualan pada hari tertentu" << endl;
         cout << "7. keluar dari program" << endl;
-        cout << "Masukkan pilihan anda yah: ";
+        cout << "----Masukkan pilihan kamu yah: ";
         cin >> menu;
 
         // if else utk memproses pilihan menu yang dipilih user
         if (menu == 1)
         {
             // nested loop utk menampilkan data penjualan setiap hari
-            cout << "\n| No. | Hari | Tipe A | Tipe B | Total |" << endl;
-            cout << "|-----|-----|-----|-----|-----|" << endl;
+            cout << "\n -----------------------------------------------------------------------" << endl;
+            cout << "|No.\t|\tHari\t|\tTipe A\t|\tTipe B\t|\tTotal\t|" << endl;
+            cout << "|-------|---------------|---------------|---------------|---------------|" << endl;
             for (int i = 0; i < 7; i++)
             {
-                cout << "| " << i + 1 << " | " << hari[i] << " | " << sales[i][0] << " | " << sales[i][1] << " | " << sales[i][0] + sales[i][1] << " |" << endl;
+                cout << "| " << i + 1 << "     | " << hari[i] << " \t| " << sales[i][0] << " \t\t| " << sales[i][1] << " \t\t| " << sales[i][0] + sales[i][1] << " \t\t|" << endl;
             }
+            cout << " -----------------------------------------------------------------------" << endl;
         }
         else if (menu == 2)
         {
@@ -111,9 +114,11 @@ int main()
             int day;
             cout << "\nMasukkan nomor hari (1-7): ";
             cin >> day;
-            cout << "\n| No. | Hari | Tipe A | Tipe B | Total |" << endl;
-            cout << "|-----|-----|-----|-----|-----|" << endl;
-            cout << "| " << day << " | " << hari[day - 1] << " | " << sales[day - 1][0] << " | " << sales[day - 1][1] << " | " << sales[day - 1][0] + sales[day - 1][1] << " |" << endl;
+            cout << "\n -----------------------------------------------------------------------" << endl;
+            cout << "|No.\t|\tHari\t|\tTipe A\t|\tTipe B\t|\tTotal\t|" << endl;
+            cout << "|-------|---------------|---------------|---------------|---------------|" << endl;
+            cout << "| " << day << "     | " << hari[day - 1] << " \t| " << sales[day - 1][0] << " \t\t| " << sales[day - 1][1] << " \t\t| " << sales[day - 1][0] + sales[day - 1][1] << " \t\t|" << endl;
+            cout << " -----------------------------------------------------------------------" << endl;
         }
         else if (menu == 7)
         {
