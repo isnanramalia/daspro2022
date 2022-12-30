@@ -40,7 +40,8 @@ int main()
         cout << "4. hitung total penjualan selama 7 hari" << endl;
         cout << "5. tampilkan rata-rata penjualan selama 7 hari" << endl;
         cout << "6. tampilkan data penjualan pada hari tertentu" << endl;
-        cout << "7. keluar dari program" << endl;
+        cout << "7. cari data hari pada hari tertentu" << endl;
+        cout << "8. keluar dari program" << endl;
         cout << "----Masukkan pilihan kamu yah: ";
         cin >> menu;
 
@@ -122,11 +123,40 @@ int main()
         }
         else if (menu == 7)
         {
+            // input hari yang akan dicari
+            string search_day;
+            cout << "\nMasukkan nama hari yang akan dicari: ";
+            cin >> search_day;
+
+            // loop untuk mencari hari yang dicari
+            bool found = false;
+            for (int i = 0; i < 7; i++)
+            {
+                if (search_day == hari[i])
+                {
+                    // menampilkan data penjualan pada hari yang ditemukan
+                    cout << "\nData penjualan pada hari " << hari[i] << ": " << endl;
+                    cout << " ayam geprek tipe A: " << sales[i][0] << endl;
+                    cout << " ayam geprek tipe B: " << sales[i][1] << endl;
+                    cout << " total: " << sales[i][0] + sales[i][1] << endl;
+                    found = true;
+                    break;
+                }
+            }
+
+            // jika hari tidak ditemukan
+            if (!found)
+            {
+                cout << "\nHari yang Anda cari tidak ditemukan." << endl;
+            }
+        }
+        else if (menu == 8)
+        {
             keluar = true;
         }
         else
         {
-            cout << "\nInput salah. Silahkan pilih yg ada di menu yahh" << endl;
+            cout << "\nInputan anda salah. Silahkan pilih yg ada di menu yahh" << endl;
         }
     }
     return 0;
